@@ -1,33 +1,4 @@
-# Repository contents at this directory level
-* ***data* folder**
-  * This folder contains a local version of the MNIST dataset. The code uses this folder, so if its location is changed, the code has to be updated as well.  
-* ***results* folder**
-  * This folder contains two Microsoft Excel files:
-    * ***execution_time.xlsx* file:**
-      This file contains all the execution times (s) of all the phases of an epoch obtained from the different configurations tested. In addition, it can be also found the figures used in the presented paper. 
-    * ***test_accuracies.xlsx* file:**
-      This file contains all the accuracies (%) obtained from the different configurations tested. In addition, it can be also found the figures used in the presented paper.  
 
-# Models files
-The tested models were saved and they are available in a
-[shared Google Drive folder](https://drive.google.com/drive/folders/11iJYIadVgx0wwGGEwb4PjgN8EWqKlVTm?usp=sharing) 
-accessible to any UC3M email. If you need access and do not have such an account or it is simple not available, please contact me and I will send you the files. An example of how to load a model from the files can be found in the code.
-
-The directory tree of the models folder is the following:
-
-```bash
-.
-├── XN
-    ├── XN_YBS_ZE_WF
-        ├── WF
-            ├── assignments.pt
-            ├── network.pt
-            └── proportions.pt
-```
-*X* represents the number of excitatory neurons of the model, *Y* the batch size, *Z* the number of epochs and *F* the fold. Remember that, as a 6-folds cross-validation procesdure is used, for each unique configuration, six independent models will be created, each one with its own files.
-
-# Implemented code
-The code has been thoroughly commented in order to point out those technical details that may seem strange at first sight. The base code can be found [here](https://github.com/BindsNET/bindsnet/blob/master/examples/mnist/batch_eth_mnist.py). Several topics that may be useful are discussed below.
 ## Execution instructions and possible arguments
 For executing the code run the following line inside the *mnist_network* folder:
 ```bash
